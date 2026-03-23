@@ -1,5 +1,1 @@
-(add_four_eight.py is a source file, so no ignores needed)
-
-```python
-
-```
+Nothing needs to be added to .gitignore since only a Python source file (`add_one_one.py`) was added, which is a regular source code file that should not be ignored.
