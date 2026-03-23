@@ -1,0 +1,13 @@
+#Shell script backup/swap files
+*.swp
+*.swo
+*.bak
+*.tmp
+
+#Log files
+*.log
+
+#Environment files
+.env
+.env.local
+*.env.*
