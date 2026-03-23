@@ -1,0 +1,66 @@
+"""
+简单的数字计算逻辑示例
+"""
+
+def add(a, b):
+    """加法运算"""
+    return a + b
+
+def subtract(a, b):
+    """减法运算"""
+    return a - b
+
+def multiply(a, b):
+    """乘法运算"""
+    return a * b
+
+def divide(a, b):
+    """除法运算"""
+    if b == 0:
+        raise ValueError("除数不能为零")
+    return a / b
+
+def calculate(a, b, operator):
+    """
+    根据运算符执行相应的计算
+    
+    参数:
+        a: 第一个数字
+        b: 第二个数字
+        operator: 运算符 (+, -, *, /)
+    
+    返回:
+        计算结果
+    """
+    operators = {
+        '+': add,
+        '-': subtract,
+        '*': multiply,
+        '/': divide
+    }
+    
+    if operator not in operators:
+        raise ValueError(f"不支持的运算符: {operator}")
+    
+    return operators[operator](a, b)
+
+
+# 示例使用
+if __name__ == "__main__":
+    # 基本运算示例
+    print("=== 简单数字计算示例 ===")
+    
+    num1 = 10
+    num2 = 5
+    
+    print(f"{num1} + {num2} = {add(num1, num2)}")
+    print(f"{num1} - {num2} = {subtract(num1, num2)}")
+    print(f"{num1} * {num2} = {multiply(num1, num2)}")
+    print(f"{num1} / {num2} = {divide(num1, num2)}")
+    
+    # 使用通用计算函数
+    print("\n=== 使用通用计算函数 ===")
+    print(f"15 + 7 = {calculate(15, 7, '+')}")
+    print(f"20 - 8 = {calculate(20, 8, '-')}")
+    print(f"6 * 9 = {calculate(6, 9, '*')}")
+    print(f"100 / 4 = {calculate(100, 4, '/')}")
